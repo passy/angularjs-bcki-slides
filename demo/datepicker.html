@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myApp">
+<meta charset=utf-8>
+<title>Web Components: Date Picker</title>
+<link rel=stylesheet href=bootstrap.css>
+<link rel=stylesheet href=jquery-ui-1.8.22.css>
+<link rel=stylesheet href=angular-ui.css>
+<style>
+body {
+    padding-left: 10px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6 well">
+                <ui-date ng-model=date></ui-date><br>
+                <input type=text ng-model=date ui-date>
+                <div>Gewähltes Datum: {{ date }}</div>
+                <div>Formartiertes Datum: {{ date | date:'mediumDate' }}</div>
+                <div>Gewählter Monat: {{ date.getMonth() }}</div>
+            </div>
+        </div>
+    </div>
+    <script src=jquery-1.7.2.js></script>
+    <script src=jquery-ui-1.8.22.js></script>
+    <script src=angular-1.0.1.js></script>
+    <script src=angular-ui.js></script>
+    <script src=datepicker.js></script>
+</body>
+</html>

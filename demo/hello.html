@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Hello World Example</title>
+<link rel=stylesheet href=bootstrap.css>
+<style>
+body {
+    font-size: 300%;
+    padding: 60px;
+}
+</style>
+
+<body ng-app>
+<p ng-controller="HelloController">
+    {{ greeting }}
+</p>
+
+<script>
+    function HelloController($scope) {
+        $scope.greeting = "Hello World!";
+    }
+</script>
+<script src=angular-1.0.1.js></script>
+</body>

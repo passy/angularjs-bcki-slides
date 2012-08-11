@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app>
+<meta charset=utf-8>
+<title>HTTP DI Example</title>
+<link rel=stylesheet href=bootstrap.css>
+<style>
+body {
+    padding-top: 50px;
+    padding-left: 10px
+}
+</style>
+
+<body ng-controller="FetchController">
+    <div class="container">
+        <div class="row-fluid">
+            <div class=span3>
+                <input type=text ng-model=url>
+                <button ng-click="fetch()">Fetch!</button>
+            </div>
+            <div class="span6 well">
+                <dl>
+                    <dt>Status</dt>
+                    <dd>{{ status }}</dd>
+                    <dt>Data</dt>
+                    <dd><textarea ng-model=data></textarea></dl>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <script src=angular-1.0.1.js></script>
+    <script src=http.js></script>
+</body>
+</html>
